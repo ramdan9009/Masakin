@@ -12,12 +12,22 @@
     <!--android:layout_height="match_parent"-->
     <!--android:layout_width="match_parent"/>-->
 
-    <FrameLayout
-        android:id="@+id/frame"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </FrameLayout>
+        <include
+            android:id="@+id/main_act_toolbar"
+            layout="@layout/main_toolbar"/>
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_act_toolbar">
+
+        </FrameLayout>
+
+    </RelativeLayout>
 
 
     <android.support.design.widget.NavigationView

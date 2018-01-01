@@ -8,8 +8,9 @@ import android.view.ViewGroup;
 
 import com.ramdan.masakin.R;
 
-public class SugestedMenuFragment extends Fragment {
+import butterknife.ButterKnife;
 
+public class SugestedMenuFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -20,7 +21,10 @@ public class SugestedMenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sugested_menu, container, false);
+        View view = inflater.inflate(R.layout.fragment_sugested_menu, container, false);
+        ButterKnife.bind(this,view);
+
+        return view;
     }
 
 }

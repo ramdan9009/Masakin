@@ -7,8 +7,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.ramdan.masakin.R;
 import com.ramdan.masakin.adapter.HomeTabAdapter;
@@ -21,8 +24,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class HomeActivity extends AppCompatActivity {
-//    @BindView(R.id.main_act_toolbar)
-//    Toolbar toolbar;
+    @BindView(R.id.main_actionBar)
+    Toolbar toolbar;
 //
 //    @BindView(R.id.main_act_tabLayout)
 //    TabLayout tabLayout;
@@ -45,6 +48,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
 
+        toolbar.setTitle(R.string.app_name);
         loadCurrentFragment(R.id.drawer_home_menu);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -55,6 +59,20 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close){
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+            }
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+        };
+
+        drawerLayout.setDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
 
     }
 
