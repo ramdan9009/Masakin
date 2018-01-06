@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "761058639025",
+    "firebase_url": "https://masakin-26cad.firebaseio.com",
+    "project_id": "masakin-26cad",
+    "storage_bucket": "masakin-26cad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761058639025:android:64c7ac9cd8631683",
+        "android_client_info": {
+          "package_name": "com.ramdan.masakin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761058639025-9hq48srn68j8o70vfbuq5huhvft3rcb6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ramdan.masakin",
+            "certificate_hash": "fe3b4719f2388fe90cd3bad3cb6a8ba93b8740ac"
+          }
+        },
+        {
+          "client_id": "761058639025-i0g2p13rgub611e41bnprr9cifcet6u2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEamwUDsIKEXnQiDJ7xGgIj9gRYtT-HGw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761058639025-i0g2p13rgub611e41bnprr9cifcet6u2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
